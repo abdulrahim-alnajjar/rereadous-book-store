@@ -1,0 +1,31 @@
+a:hover {
+  color: #d35c41;
+}
+
+a > svg {
+  animation: ring_animarion 2.5s ease-in-out infinite;
+}
+a:nth-of-type(2) > svg {
+  animation-delay: 0.2s;
+}
+a:nth-of-type(3) > svg {
+  animation-delay: 0.4s;
+}
+a:nth-of-type(4) > svg {
+  animation-delay: 0.6s;
+}
+a:nth-of-type(5) > svg {
+  animation-delay: 0.8s;
+}
+a:nth-of-type(6) > svg {
+  animation-delay: 1s;
+}
+
+@keyframes ring_animarion {
+  15% {
+    transform: rotate(-45deg);
+  }
+  45% {
+    transform: rotate(0deg);
+  }
+}

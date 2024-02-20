@@ -1,0 +1,35 @@
+<section class="position-relative py-5 my-5">
+  <div class="card border-0 bg-transparent mb-3">
+    <div class="row align-items-center">
+      <!-- left col -->
+      <div class="col-md-6">
+        <div class="card-body">
+          <!-- title -->
+          <h2 class="card-title h1">{{ sectionTitle }}</h2>
+          <hr class="w-25" />
+
+          <!-- Des -->
+          <p class="card-text text-body-secondary">
+            {{ sectionDescription }}
+          </p>
+          <!-- btn -->
+          <button class="btn btn-main">Discover</button>
+        </div>
+      </div>
+
+      <!-- img -->
+      <div class="col-md-6 mt-5 mt-md-0 position-relative">
+        <img
+          class="card-img shadow-lg position-relative z-1"
+          [src]="sectionImg"
+          alt="..."
+        />
+        <img
+          class="b-img card-img w-75 d-block position-absolute top-50 z-0 mx-auto shadow-sm"
+          src="https://picsum.photos/500/400"
+          alt="..."
+        />
+      </div>
+    </div>
+  </div>
+</section>

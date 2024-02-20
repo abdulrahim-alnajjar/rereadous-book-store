@@ -1,0 +1,42 @@
+<section class="position-relative py-5 my-5">
+  <div class="card border-0 bg-transparent mb-3">
+    <div class="row align-items-center">
+      <!-- img -->
+      <div class="col-md-4 position-relative">
+        <img
+          class="card-img w-75 d-block mx-auto shadow-lg position-relative z-1"
+          [src]="book.image"
+          alt="..."
+        />
+        <img
+          class="b-img card-img w-75 d-block position-absolute top-0 z-0 mx-auto shadow-sm"
+          src="https://picsum.photos/300/450"
+          alt="..."
+        />
+      </div>
+
+      <!-- right col -->
+      <div class="col-md-8 mt-4 mt-md-0">
+        <div class="card-body">
+          <!-- main book title -->
+          <p class="h1 mb-3 fw-bolder">{{ book.name | titlecase }}</p>
+
+          <!-- Author name -->
+          <p class="h3 fw-semibold text-success">
+            {{ book.author | titlecase }}
+          </p>
+          <!-- publish time -->
+          <small class="d-block text-body-secondary mb-1">
+            Pages:
+            {{ book.pages | number }} | Published In:
+            <time>{{ book.publishTime | date }}</time>
+          </small>
+          <!-- discreption -->
+          <p class="fw-medium">{{ book.description }}</p>
+          <!-- Wreed btn -->
+          <button class="btn btn-main">Want To Read</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,7 @@
+.card-img {
+  transform: rotate(-5deg);
+}
+.b-img.card-img {
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(5deg);
+}

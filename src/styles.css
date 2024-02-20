@@ -1,1 +1,87 @@
-/* You can add global styles to this file, and also import other style files */
+/** Glopal */
+:root {
+  --ng-body-bg: #f7f6f4;
+  --ng-main-color: #d35c41;
+  --ng-main-color-rgb: 211, 92, 65;
+  --ng-main-color-hover: #b44c35;
+  --ng-footer-bg: #7f9797;
+}
+
+body {
+  font-family: "Rubik", sans-serif !important;
+  background-color: var(--ng-body-bg) !important;
+}
+
+.text-main {
+  color: var(--ng-main-color) !important;
+  fill: var(--ng-main-color) !important;
+}
+
+.text-body-main {
+  color: var(--bs-body-bg) !important;
+  fill: var(--bs-body-bg) !important;
+}
+
+.bg-footer {
+  background-color: var(--ng-footer-bg) !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn-main {
+  --bs-btn-color: #fff !important;
+  --bs-btn-bg: var(--ng-main-color) !important;
+  --bs-btn-border-color: var(--ng-main-color) !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: var(--ng-main-color-hover) !important;
+  --bs-btn-hover-border-color: var(--ng-main-color-hover) !important;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: var(--ng-main-color-hover) !important;
+  --bs-btn-active-border-color: var(--ng-main-color-hover) !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  --bs-btn-disabled-color: #fff !important;
+  --bs-btn-disabled-bg: var(--ng-main-color) !important;
+  --bs-btn-disabled-border-color: var(--ng-main-color) !important;
+}
+
+.btn-outline-main {
+  --bs-btn-color: var(--ng-main-color) !important;
+  --bs-btn-border-color: var(--ng-main-color) !important;
+  --bs-btn-hover-color: #fff !important;
+  --bs-btn-hover-bg: var(--ng-main-color) !important;
+  --bs-btn-hover-border-color: var(--ng-main-color) !important;
+  --bs-btn-focus-shadow-rgb: var(--ng-main-color-rgb) !important;
+  --bs-btn-active-color: #fff !important;
+  --bs-btn-active-bg: var(--ng-main-color) !important;
+  --bs-btn-active-border-color: var(--ng-main-color) !important;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125) !important;
+  --bs-btn-disabled-color: var(--ng-main-color) !important;
+  --bs-btn-disabled-bg: transparent !important;
+  --bs-btn-disabled-border-color: var(--ng-main-color) !important;
+  --bs-gradient: none !important;
+}
+
+/* Animation */
+.animate_rotating_container:hover .animate_rotating_target {
+  display: inline-block;
+  animation: rotating_animation 1s ease-in-out;
+}
+
+@keyframes rotating_animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(-360deg);
+  }
+}

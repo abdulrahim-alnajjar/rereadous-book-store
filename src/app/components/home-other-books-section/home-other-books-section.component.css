@@ -1,0 +1,16 @@
+.card > a.hyper-box::before {
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 90%;
+  background: #dae8e9;
+  z-index: -1;
+  border-radius: 0.25rem;
+}
+
+.card-img {
+  transform: rotate(-5deg);
+}

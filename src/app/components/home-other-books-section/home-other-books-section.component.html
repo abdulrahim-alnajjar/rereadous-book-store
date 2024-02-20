@@ -1,0 +1,75 @@
+<section class="my-5 py-5">
+  <!-- Section Title -->
+  <h2 class="h1">{{ sectionTitle }}</h2>
+  <hr class="w-25" />
+
+  <!-- First Book -->
+  <div class="row">
+    <div
+      class="card col-12 col-md-6 border-0 bg-transparent mb-4"
+      *ngFor="let book of books"
+    >
+      <a href="/" routerLink="/" class="nav-link hyper-box position-relative">
+        <div class="row align-items-center">
+          <!-- img -->
+          <div class="col-4">
+            <img
+              class="card-img w-75 d-block mx-auto shadow"
+              [src]="book.image"
+              alt="..."
+            />
+          </div>
+
+          <!-- right col -->
+          <div class="col-8">
+            <div class="card-body">
+              <!-- book name -->
+              <h5 class="card-title">{{ book.name | titlecase }}</h5>
+              <!-- author -->
+              <p class="card-text fw-semibold text-main mb-0">
+                {{ book.author | titlecase }}
+              </p>
+
+              <!-- pages -->
+              <div class="d-lg-flex align-items-center my-1">
+                <small class="me-2 ,e-;g-0">
+                  Pages {{ book.readedPages | number }}/{{
+                    book.pages | number
+                  }}</small
+                >
+                <div
+                  class="progress flex-fill order-lg-first me-lg-2"
+                  style="height: 4px"
+                  role="progressbar"
+                  aria-label="Example with label"
+                  aria-valuenow="25"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  <div
+                    class="progress-bar text-warning"
+                    [ngStyle]="{
+                      'width.%': (book.readedPages / book.pages) * 100
+                    }"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- publishTime -->
+              <p class="card-text">
+                <small class="text-body-secondary">{{
+                  book.publishTime | date
+                }}</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- See More Btn -->
+  <div class="col-12 mt-3">
+    <button class="btn btn-outline-main d-block mx-auto">See More</button>
+  </div>
+</section>
